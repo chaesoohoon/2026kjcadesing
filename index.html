@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2026 THE국제직업전문학교 첨단점 비전 발표</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700&family=Oswald:wght@400;500;700&family=Pretendard:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Pretendard', 'sans-serif'],
+              serif: ['Noto Serif KR', 'serif'], // Added Serif font for emotional slides
+              display: ['Oswald', 'sans-serif'], // Nike style condensed font
+            },
+            colors: {
+              background: '#000000',
+              surface: '#111111',
+              accent: '#FF5E00', // Tangerine
+              'accent-hover': '#FF7A29',
+            },
+            letterSpacing: {
+              tighter: '-0.05em',
+              tightest: '-0.08em',
+              widest: '0.2em',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        background-color: #000000;
+        color: #ffffff;
+        overflow-x: hidden;
+        overflow-y: hidden; /* Prevent body scroll, handle inside container */
+      }
+      
+      /* Smooth Scroll Styling */
+      .snap-container {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+        scroll-behavior: smooth;
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      
+      .snap-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .snap-section {
+        scroll-snap-align: start;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      /* Utility for text strokes if needed */
+      .text-stroke {
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+        color: transparent;
+      }
+      
+      .text-shadow-glow {
+        text-shadow: 0 0 40px rgba(255, 94, 0, 0.6);
+      }
+
+      /* PRINT / PDF EXPORT STYLES */
+      @media print {
+        @page {
+          size: landscape;
+          margin: 0;
+        }
+        
+        body {
+          overflow: visible !important;
+          background-color: #000000 !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        .snap-container {
+          height: auto !important;
+          overflow: visible !important;
+          scroll-snap-type: none !important;
+        }
+
+        .snap-section {
+          height: 100vh !important;
+          page-break-after: always !important;
+          break-after: page !important;
+          print-color-adjust: exact !important;
+          background-color: #000000 !important;
+        }
+
+        /* Hide UI elements during print */
+        .fixed, button, .no-print {
+          display: none !important;
+        }
+
+        /* Ensure white text prints as white on black */
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
